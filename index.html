@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/common.css" />
   <link rel="stylesheet" href="css/main.css" />
   <script src="js/common.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body data-page="main">
@@ -27,20 +28,15 @@
     </div>
   </header>
   <main id="content">
-    <section class="main-hero" aria-labelledby="main-title">
-      <!-- 실제 영상은 video/campaign.mp4에 넣고 data-src를 유지하세요. 파일이 있을 때만 플레이어가 표시됩니다. --><video class="main-video"
-        data-src="video/home.mp4" poster="img/campaign-poster.png" controls playsinline hidden></video>
+    <section class="main-hero" aria-label="SAFEN 캠페인 영상">
+      <video class="main-video" src="img/mainvideo.mp4" autoplay muted loop playsinline></video>
       <div class="main-hero-copy inner">
         <p class="eyebrow">CAMPAIGN FILM</p>
-        <h1 id="main-title">
-          개인정보를 지키는 일,<br />나의 일상을<br />지키는 일입니다.
-        </h1>
-        <p>
-          동의하기 전 한 번 더 확인하고,<br />공유하기 전 잠깐 생각해 주세요.
-        </p>
+        <h1 id="main-title">개인정보를 지키는 일,<br />나의 일상을<br />지키는 일입니다.</h1>
+        <p>동의하기 전 한 번 더 확인하고,<br />공유하기 전 잠깐 생각해 주세요.</p>
       </div>
-      <p class="video-status">캠페인 영상 준비 중</p>
     </section>
+
     <section class="main-about">
       <div class="inner">
         <div class="main-intro">
@@ -48,11 +44,10 @@
             <p class="eyebrow">ABOUT THE CAMPAIGN</p>
             <h2>내 정보의 주인은 나입니다.</h2>
           </div>
-          <p>
-            개인정보는 우리의 일상과 연결되어 있습니다.<br />작은 관심과
-            실천이 나와 가족의 안전한 일상을 만듭니다.
-          </p>
+          <p>개인정보는 우리의 일상과 연결되어 있습니다.<br />작은 관심과
+            실천이 나와 가족의 안전한 일상을 만듭니다.</p>
         </div>
+
         <div class="main-practice">
           <p class="eyebrow">개인정보 보호 실천 가이드</p>
           <h2>생활 속 세 가지 확인</h2>
@@ -64,10 +59,12 @@
               <p>수집 목적과 필수·선택 항목을 확인해요.</p>
             </article>
             <article>
+
               <img class="" src="img/share.png" alt="공유하기 전, 살펴봐요" loading="lazy" />
               <h3>공유하기 전, 살펴봐요</h3>
               <p>사진 속 주소와 연락처, 위치정보를 살펴봐요.</p>
             </article>
+
             <article>
               <img class="" src="img/login.png" alt="로그인할 때, 보호해요" loading="lazy" />
               <h3>로그인할 때, 보호해요</h3>
@@ -77,20 +74,19 @@
         </div>
       </div>
     </section>
+
     <section class="main-records">
       <div class="inner">
         <img class="" src="img/parcel.png" alt="이름과 연락처가 남아 있는 택배 송장" loading="lazy" />
         <div>
           <p class="eyebrow">EVERYDAY RECORDS</p>
           <h2>평범한 일상에도,<br />정보는 남습니다.</h2>
-          <p>
-            택배 상자의 이름과 연락처, 사진 속 위치정보,<br />우리가 남기는
-            온라인 기록까지.<br />일상 속 다양한 순간에 개인정보가 남을 수
-            있습니다.
-          </p>
+          <p>택배 상자의 이름과 연락처, 사진 속 위치정보,<br />우리가 남기는온라인 기록까지.<br />
+            일상 속 다양한 순간에 개인정보가 남을 수있습니다.</p>
         </div>
       </div>
     </section>
+
     <section class="main-faq inner">
       <div>
         <p class="eyebrow">FAQ PREVIEW</p>
@@ -105,6 +101,7 @@
             모두 허용해야 하나요?</span><span aria-hidden="true">→</span></a>
       </div>
     </section>
+
     <section class="main-cta inner">
       <div>
         <h2>작은 확인으로, 더 안전한 일상.</h2>
@@ -114,6 +111,7 @@
       <img class="" src="img/main-cta.png" alt="햇살이 비치는 책상과 머그잔" loading="lazy" />
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="inner">
       <div class="footer-top">

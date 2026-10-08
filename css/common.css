@@ -1,3 +1,88 @@
+/* ==============================
+   SAFEN HEADER / FOOTER HOVER
+============================== */
+
+/* 1. 헤더 메뉴 */
+.site-header nav a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+
+  text-shadow: 0 4px 4px transparent;
+
+  transition:
+    color 0.5s ease,
+    text-decoration-color 0.5s ease,
+    text-shadow 0.5s ease,
+    border-color 0.5s ease;
+}
+
+/* 헤더 네비게이션 호버 */
+.site-header nav a {
+  text-decoration: none;
+  text-shadow: 0 4px 4px transparent;
+
+  transition:
+    color 0.5s ease,
+    text-shadow 0.5s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+  color: #000000;
+  text-decoration: none;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 2. 푸터 메뉴 */
+.site-footer .footer-links a {
+  color: #ffffff;
+  text-shadow: 0 0 10px transparent;
+
+  transition:
+    color 0.6s ease,
+    text-shadow 0.6s ease;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-links a:focus-visible {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px rgba(211, 225, 238, 0.9),
+    0 0 10px rgba(211, 225, 238, 0.8);
+}
+
+/* 3. 푸터 SAFEN 로고 */
+.site-footer .logo {
+  color: #ffffff;
+  text-shadow: 0 0 10px transparent;
+
+  transition:
+    color 0.6s ease,
+    text-shadow 0.6s ease;
+}
+
+.site-footer .logo:hover,
+.site-footer .logo:focus-visible {
+  text-shadow:
+    0 0 5px rgba(211, 225, 238, 0.9),
+    0 0 10px rgba(211, 225, 238, 0.8);
+}
+
+/* 사용자의 애니메이션 감소 설정 존중 */
+@media (prefers-reduced-motion: reduce) {
+
+  .site-header nav a,
+  .site-footer .footer-links a,
+  .site-footer .logo {
+    transition: none;
+  }
+}
+
+
+
+
 /* SVG 원본: 각 페이지 1920px / 공통 콘텐츠 1440px, 가이드 1592px. */
 @font-face {
   font-family: Pretendard;
@@ -6,10 +91,12 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: HANAMDAUM;
   src: local("HANAMDAUM");
 }
+
 :root {
   --navy: #213140;
   --ivory: #f8f4ee;
@@ -18,9 +105,11 @@
   --ink: #111111;
   --line: rgba(33, 49, 64, 0.22);
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: Pretendard, "Noto Sans KR", "Malgun Gothic", sans-serif;
   color: var(--navy);
@@ -29,47 +118,58 @@ body {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
+
 h1,
 h2,
 h3 {
   line-height: 1.35;
   letter-spacing: -0.035em;
 }
+
 h1 {
   font-size: 52px;
 }
+
 h2 {
   font-size: 44px;
 }
+
 h3 {
   font-size: 28px;
 }
+
 button {
   border: 0;
   background: none;
 }
+
 a,
 button,
 input {
   touch-action: manipulation;
 }
+
 :focus-visible {
   outline: 3px solid #547d9f;
   outline-offset: 5px;
 }
+
 .inner {
   width: min(1440px, calc(100% - 80px));
   margin-inline: auto;
 }
+
 .guide-inner {
   width: min(1592px, calc(100% - 80px));
   margin-inline: auto;
 }
+
 .eyebrow {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 25px;
 }
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -84,15 +184,18 @@ input {
   font-weight: 700;
   margin-top: 32px;
 }
+
 .button:hover {
   background: #344b60;
 }
+
 .site-header {
   height: 60px;
   background: rgba(255, 255, 255, 0.85);
   position: relative;
   z-index: 10;
 }
+
 .header-inner {
   max-width: 1610px;
   width: calc(100% - 80px);
@@ -102,6 +205,7 @@ input {
   align-items: center;
   justify-content: space-between;
 }
+
 .logo {
   font-family: HANAMDAUM, Pretendard, sans-serif;
   font-size: 38px;
@@ -109,6 +213,7 @@ input {
   line-height: 1;
   font-weight: 500;
 }
+
 .site-header nav {
   display: flex;
   align-items: center;
@@ -117,24 +222,29 @@ input {
   font-weight: 700;
   height: 100%;
 }
+
 .site-header nav a {
   display: flex;
   align-items: center;
   height: 100%;
   border-bottom: 2px solid transparent;
 }
+
 .site-header nav a[aria-current="page"] {
   border-color: var(--navy);
 }
+
 .menu-toggle {
   display: none;
 }
+
 .site-footer {
   background: var(--navy);
   color: var(--ivory);
   margin-top: 80px;
   padding: 64px 0 90px;
 }
+
 .footer-top {
   display: grid;
   grid-template-columns: 1fr 320px;
@@ -142,13 +252,16 @@ input {
   align-items: center;
   padding-bottom: 44px;
 }
+
 .footer-top h2 {
   font-size: 24px;
   margin-bottom: 15px;
 }
+
 .footer-top p {
   font-size: 20px;
 }
+
 .footer-links {
   border-left: 1px solid #ffffff30;
   padding-left: 64px;
@@ -157,6 +270,7 @@ input {
   font-size: 18px;
   gap: 7px;
 }
+
 .footer-bottom {
   border-top: 1px solid #ffffff30;
   padding-top: 36px;
@@ -165,13 +279,16 @@ input {
   align-items: center;
   gap: 20px;
 }
+
 .footer-bottom .logo {
   font-size: 34px;
 }
+
 .footer-bottom small {
   font-size: 14px;
   color: var(--gray);
 }
+
 .top-button {
   position: fixed;
   bottom: 32px;
@@ -190,9 +307,11 @@ input {
   font-size: 9px;
   line-height: 1.2;
 }
+
 .top-button span {
   font-size: 22px;
 }
+
 .sr-only,
 .skip-link:not(:focus) {
   position: absolute;
@@ -202,72 +321,92 @@ input {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
 .skip-link:focus {
   position: fixed;
   z-index: 100;
   background: white;
   padding: 12px;
 }
+
 .video-status {
   font-size: 14px;
 }
+
 .video-status span {
   font-size: 55px;
 }
+
 @media (max-width: 1000px) {
   body {
     font-size: 18px;
   }
+
   h1 {
     font-size: 44px;
   }
+
   h2 {
     font-size: 34px;
   }
+
   h3 {
     font-size: 24px;
   }
+
   .site-header nav {
     gap: 35px;
   }
+
   .footer-top {
     grid-template-columns: 1fr 220px;
   }
+
   .footer-links {
     padding-left: 30px;
   }
 }
+
 @media (max-width: 700px) {
   body {
     font-size: 16px;
     line-height: 1.75;
   }
+
   .inner,
   .guide-inner {
     width: calc(100% - 40px);
   }
+
   h1 {
     font-size: 32px;
   }
+
   h2 {
     font-size: 28px;
   }
+
   h3 {
     font-size: 21px;
   }
+
   .eyebrow {
     font-size: 11px;
     margin-bottom: 18px;
   }
+
   .site-header {
     height: 64px;
   }
+
   .header-inner {
     width: calc(100% - 40px);
   }
+
   .logo {
     font-size: 29px;
   }
+
   .menu-toggle {
     display: flex;
     width: 44px;
@@ -277,11 +416,13 @@ input {
     gap: 7px;
     padding: 10px;
   }
+
   .menu-toggle span {
     height: 2px;
     width: 24px;
     background: var(--navy);
   }
+
   .site-header nav {
     display: none;
     position: absolute;
@@ -296,12 +437,15 @@ input {
     align-items: stretch;
     gap: 0;
   }
+
   .site-header nav.is-open {
     display: flex;
   }
+
   .site-header nav a {
     padding: 12px 0;
   }
+
   .button {
     min-width: 210px;
     min-height: 48px;
@@ -309,41 +453,51 @@ input {
     padding: 12px 16px;
     margin-top: 24px;
   }
+
   .site-footer {
     margin-top: 48px;
     padding: 40px 0 34px;
   }
+
   .footer-top {
     grid-template-columns: 1fr;
     gap: 30px;
     padding-bottom: 30px;
   }
+
   .footer-top h2 {
     font-size: 20px;
   }
+
   .footer-top p {
     font-size: 14px;
   }
+
   .footer-links {
     border: 0;
     padding: 0;
     font-size: 15px;
     gap: 5px;
   }
+
   .footer-links h2 {
     font-size: 16px;
   }
+
   .footer-bottom {
     align-items: flex-start;
     flex-direction: column;
     padding-top: 25px;
   }
+
   .footer-bottom .logo {
     font-size: 28px;
   }
+
   .footer-bottom small {
     font-size: 11px;
   }
+
   .top-button {
     right: 16px;
     bottom: 18px;
@@ -351,6 +505,7 @@ input {
     height: 44px;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

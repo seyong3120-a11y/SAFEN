@@ -1,189 +1,140 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="작은 확인으로, 더 안전한 일상. SAFEN 개인정보 보호 캠페인"
-    />
-    <title>SAFEN | 캠페인</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <script src="js/common.js" defer></script>
-  </head>
-  <body data-page="main">
-    <a class="skip-link" href="#content">본문 바로가기</a>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="logo" href="index.html" aria-label="SAFEN 캠페인 홈">SAFEN</a
-        ><button
-          class="menu-toggle"
-          aria-label="메뉴 열기"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <span></span><span></span>
-        </button>
-        <nav id="site-nav" aria-label="주 메뉴">
-          <a href="index.html" data-page="main">캠페인</a
-          ><a href="guide.html" data-page="guide">보호가이드</a
-          ><a href="faq.html" data-page="faq">자주 묻는 질문</a>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="작은 확인으로, 더 안전한 일상. SAFEN 개인정보 보호 캠페인" />
+  <title>SAFEN | 캠페인</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/common.js" defer></script>
+</head>
+
+<body data-page="main">
+  <a class="skip-link" href="#content">본문 바로가기</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="SAFEN 캠페인 홈">SAFEN</a><button class="menu-toggle" aria-label="메뉴 열기"
+        aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav id="site-nav" aria-label="주 메뉴">
+        <a href="index.html" data-page="main">캠페인</a><a href="guide.html" data-page="guide">보호가이드</a><a href="faq.html"
+          data-page="faq">자주 묻는 질문</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    <section class="main-hero" aria-labelledby="main-title">
+      <!-- 실제 영상은 video/campaign.mp4에 넣고 data-src를 유지하세요. 파일이 있을 때만 플레이어가 표시됩니다. --><video class="main-video"
+        data-src="video/home.mp4" poster="img/campaign-poster.png" controls playsinline hidden></video>
+      <div class="main-hero-copy inner">
+        <p class="eyebrow">CAMPAIGN FILM</p>
+        <h1 id="main-title">
+          개인정보를 지키는 일,<br />나의 일상을<br />지키는 일입니다.
+        </h1>
+        <p>
+          동의하기 전 한 번 더 확인하고,<br />공유하기 전 잠깐 생각해 주세요.
+        </p>
       </div>
-    </header>
-    <main id="content">
-      <section class="main-hero" aria-labelledby="main-title">
-        <!-- 실제 영상은 video/campaign.mp4에 넣고 data-src를 유지하세요. 파일이 있을 때만 플레이어가 표시됩니다. --><video
-          class="main-video"
-          data-src="video/campaign.mp4"
-          poster="img/campaign-poster.png"
-          controls
-          playsinline
-          hidden
-        ></video>
-        <div class="main-hero-copy inner">
-          <p class="eyebrow">CAMPAIGN FILM</p>
-          <h1 id="main-title">
-            개인정보를 지키는 일,<br />나의 일상을<br />지키는 일입니다.
-          </h1>
+      <p class="video-status">캠페인 영상 준비 중</p>
+    </section>
+    <section class="main-about">
+      <div class="inner">
+        <div class="main-intro">
+          <div>
+            <p class="eyebrow">ABOUT THE CAMPAIGN</p>
+            <h2>내 정보의 주인은 나입니다.</h2>
+          </div>
           <p>
-            동의하기 전 한 번 더 확인하고,<br />공유하기 전 잠깐 생각해 주세요.
+            개인정보는 우리의 일상과 연결되어 있습니다.<br />작은 관심과
+            실천이 나와 가족의 안전한 일상을 만듭니다.
           </p>
         </div>
-        <p class="video-status">캠페인 영상 준비 중</p>
-      </section>
-      <section class="main-about">
-        <div class="inner">
-          <div class="main-intro">
-            <div>
-              <p class="eyebrow">ABOUT THE CAMPAIGN</p>
-              <h2>내 정보의 주인은 나입니다.</h2>
-            </div>
-            <p>
-              개인정보는 우리의 일상과 연결되어 있습니다.<br />작은 관심과
-              실천이 나와 가족의 안전한 일상을 만듭니다.
-            </p>
+        <div class="main-practice">
+          <p class="eyebrow">개인정보 보호 실천 가이드</p>
+          <h2>생활 속 세 가지 확인</h2>
+          <p>오늘부터 하나씩, 어렵지 않은 실천을 시작해 보세요.</p>
+          <div class="main-cards">
+            <article>
+              <img class="" src="img/consent.png" alt="동의하기 전, 확인해요" loading="lazy" />
+              <h3>동의하기 전, 확인해요</h3>
+              <p>수집 목적과 필수·선택 항목을 확인해요.</p>
+            </article>
+            <article>
+              <img class="" src="img/share.png" alt="공유하기 전, 살펴봐요" loading="lazy" />
+              <h3>공유하기 전, 살펴봐요</h3>
+              <p>사진 속 주소와 연락처, 위치정보를 살펴봐요.</p>
+            </article>
+            <article>
+              <img class="" src="img/login.png" alt="로그인할 때, 보호해요" loading="lazy" />
+              <h3>로그인할 때, 보호해요</h3>
+              <p>서로 다른 비밀번호와 2단계 인증을 사용해요.</p>
+            </article>
           </div>
-          <div class="main-practice">
-            <p class="eyebrow">개인정보 보호 실천 가이드</p>
-            <h2>생활 속 세 가지 확인</h2>
-            <p>오늘부터 하나씩, 어렵지 않은 실천을 시작해 보세요.</p>
-            <div class="main-cards">
-              <article>
-                <img
-                  class=""
-                  src="img/consent.png"
-                  alt="동의하기 전, 확인해요"
-                  loading="lazy"
-                />
-                <h3>동의하기 전, 확인해요</h3>
-                <p>수집 목적과 필수·선택 항목을 확인해요.</p>
-              </article>
-              <article>
-                <img
-                  class=""
-                  src="img/share.png"
-                  alt="공유하기 전, 살펴봐요"
-                  loading="lazy"
-                />
-                <h3>공유하기 전, 살펴봐요</h3>
-                <p>사진 속 주소와 연락처, 위치정보를 살펴봐요.</p>
-              </article>
-              <article>
-                <img
-                  class=""
-                  src="img/login.png"
-                  alt="로그인할 때, 보호해요"
-                  loading="lazy"
-                />
-                <h3>로그인할 때, 보호해요</h3>
-                <p>서로 다른 비밀번호와 2단계 인증을 사용해요.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="main-records">
-        <div class="inner">
-          <img
-            class=""
-            src="img/parcel.png"
-            alt="이름과 연락처가 남아 있는 택배 송장"
-            loading="lazy"
-          />
-          <div>
-            <p class="eyebrow">EVERYDAY RECORDS</p>
-            <h2>평범한 일상에도,<br />정보는 남습니다.</h2>
-            <p>
-              택배 상자의 이름과 연락처, 사진 속 위치정보,<br />우리가 남기는
-              온라인 기록까지.<br />일상 속 다양한 순간에 개인정보가 남을 수
-              있습니다.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="main-faq inner">
-        <div>
-          <p class="eyebrow">FAQ PREVIEW</p>
-          <h2>많이 궁금해하는 개인정보 보호</h2>
-          <p>일상 속에서 자주 묻는 질문을 모았습니다.</p>
-          <a class="button" href="faq.html"
-            >자주 묻는 질문 보기<span aria-hidden="true">→</span></a
-          >
-        </div>
-        <div class="main-question-links">
-          <a href="faq.html?category=account"
-            ><b>Q.</b><span>여러 사이트에서 같은 비밀번호를 써도 되나요?</span
-            ><span aria-hidden="true">→</span></a
-          ><a href="faq.html?category=sns"
-            ><b>Q.</b><span>사진을 올리기 전 무엇을 확인해야 하나요?</span
-            ><span aria-hidden="true">→</span></a
-          ><a href="faq.html?category=device"
-            ><b>Q.</b><span>앱 접근 권한은 모두 허용해야 하나요?</span
-            ><span aria-hidden="true">→</span></a
-          >
-        </div>
-      </section>
-      <section class="main-cta inner">
-        <div>
-          <h2>작은 확인으로, 더 안전한 일상.</h2>
-          <p>오늘도 나의 소중한 일상을 지켜요.</p>
-          <a class="button" href="guide.html"
-            >보호 가이드 보기<span aria-hidden="true">→</span></a
-          >
-        </div>
-        <img
-          class=""
-          src="img/main-cta.png"
-          alt="햇살이 비치는 책상과 머그잔"
-          loading="lazy"
-        />
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="inner">
-        <div class="footer-top">
-          <div>
-            <h2>작은 확인으로, 더 안전한 일상.</h2>
-            <p>일상 속 개인정보 보호를 함께 실천합니다.</p>
-          </div>
-          <div class="footer-links">
-            <h2>사이트 안내</h2>
-            <a href="index.html" data-page="main">캠페인</a
-            ><a href="guide.html" data-page="guide">보호가이드</a
-            ><a href="faq.html" data-page="faq">자주 묻는 질문</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <a class="logo" href="index.html">SAFEN</a
-          ><small>© 2026 SAFEN. All rights reserved.</small>
         </div>
       </div>
-    </footer>
-    <button class="top-button" aria-label="페이지 맨 위로 이동">
-      <span aria-hidden="true">↑</span>TOP
-    </button>
-  </body>
+    </section>
+    <section class="main-records">
+      <div class="inner">
+        <img class="" src="img/parcel.png" alt="이름과 연락처가 남아 있는 택배 송장" loading="lazy" />
+        <div>
+          <p class="eyebrow">EVERYDAY RECORDS</p>
+          <h2>평범한 일상에도,<br />정보는 남습니다.</h2>
+          <p>
+            택배 상자의 이름과 연락처, 사진 속 위치정보,<br />우리가 남기는
+            온라인 기록까지.<br />일상 속 다양한 순간에 개인정보가 남을 수
+            있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="main-faq inner">
+      <div>
+        <p class="eyebrow">FAQ PREVIEW</p>
+        <h2>많이 궁금해하는 개인정보 보호</h2>
+        <p>일상 속에서 자주 묻는 질문을 모았습니다.</p>
+        <a class="button" href="faq.html">자주 묻는 질문 보기<span aria-hidden="true">→</span></a>
+      </div>
+      <div class="main-question-links">
+        <a href="faq.html?category=account"><b>Q.</b><span>여러 사이트에서 같은 비밀번호를 써도 되나요?</span><span
+            aria-hidden="true">→</span></a><a href="faq.html?category=sns"><b>Q.</b><span>사진을 올리기 전 무엇을 확인해야
+            하나요?</span><span aria-hidden="true">→</span></a><a href="faq.html?category=device"><b>Q.</b><span>앱 접근 권한은
+            모두 허용해야 하나요?</span><span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section class="main-cta inner">
+      <div>
+        <h2>작은 확인으로, 더 안전한 일상.</h2>
+        <p>오늘도 나의 소중한 일상을 지켜요.</p>
+        <a class="button" href="guide.html">보호 가이드 보기<span aria-hidden="true">→</span></a>
+      </div>
+      <img class="" src="img/main-cta.png" alt="햇살이 비치는 책상과 머그잔" loading="lazy" />
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="footer-top">
+        <div>
+          <h2>작은 확인으로, 더 안전한 일상.</h2>
+          <p>일상 속 개인정보 보호를 함께 실천합니다.</p>
+        </div>
+        <div class="footer-links">
+          <h2>사이트 안내</h2>
+          <a href="index.html" data-page="main">캠페인</a><a href="guide.html" data-page="guide">보호가이드</a><a
+            href="faq.html" data-page="faq">자주 묻는 질문</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a class="logo" href="index.html">SAFEN</a><small>© 2026 SAFEN. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <button class="top-button" aria-label="페이지 맨 위로 이동">
+    <span aria-hidden="true">↑</span>TOP
+  </button>
+</body>
+
 </html>

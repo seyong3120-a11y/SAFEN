@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="작은 확인으로, 더 안전한 일상. SAFEN 개인정보 보호 캠페인" />
+  <title>SAFEN | 자주 묻는 질문</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/faq.css" />
+  <script src="js/common.js" defer></script>
+  <script src="js/faq.js" defer></script>
+</head>
+
+<body data-page="faq">
+  <a class="skip-link" href="#content">본문 바로가기</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="SAFEN 캠페인 홈">SAFEN</a><button class="menu-toggle" aria-label="메뉴 열기"
+        aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav id="site-nav" aria-label="주 메뉴">
+        <a href="index.html" data-page="main">캠페인</a><a href="guide.html" data-page="guide">보호가이드</a><a href="faq.html"
+          data-page="faq">자주 묻는 질문</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    <div class="faq-banner-wrap">
+
+      <section class="faq-hero">
+        <div class="guide-inner">
+          <p class="eyebrow">FAQ</p>
+          <h1>개인정보 보호,<br />궁금한 점을 확인하세요.</h1>
+          <p>계정 관리부터 사진 공유까지,<br />자주 묻는 질문을 모았습니다.</p>
+        </div>
+      </section>
+
+      <div class="faq-search-band">
+        <form class="faq-search" role="search">
+          <label class="sr-only" for="faq-search">
+            자주 묻는 질문 검색
+          </label>
+
+          <input id="faq-search" type="search" placeholder="궁금한 내용을 검색해보세요." autocomplete="off" />
+
+          <button aria-label="검색" type="submit">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" />
+              <path d="m15 15 6 6" stroke="currentColor" />
+            </svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+    <section class="faq-content guide-inner" aria-label="자주 묻는 질문 목록">
+      <div class="faq-filters" role="group" aria-label="질문 카테고리">
+        <button data-category="all" aria-pressed="true">전체</button><button data-category="account" aria-pressed="false">
+          계정·비밀번호</button><button data-category="sns" aria-pressed="false">SNS·사진</button><button data-category="device"
+          aria-pressed="false">앱·기기</button><button data-category="phishing" aria-pressed="false">
+          문자·피싱
+        </button>
+      </div>
+      <p id="faq-result-count" class="sr-only" aria-live="polite"></p>
+      <div id="faq-list"></div>
+      <p class="faq-empty" hidden>검색 결과가 없습니다.</p>
+      <noscript>질문을 검색하고 확인하려면 JavaScript를 활성화해 주세요.</noscript>
+    </section>
+    <section class="faq-related guide-inner">
+      <div>
+        <p class="eyebrow">RELATED GUIDES</p>
+        <h2>함께 보면 좋은 가이드</h2>
+        <p>일상 속에서 바로 실천할 수 있는<br />정보를 확인해 보세요.</p>
+      </div>
+      <a href="guide.html#account"><img class="" src="img/account-guide.png" alt="계정 보안 확인" loading="lazy" /><span>계정 ·
+          로그인<b aria-hidden="true">→</b></span></a><a href="guide.html#privacy"><img class=""
+          src="img/privacy-guide.png" alt="사진과 송장의 개인정보 확인" loading="lazy" /><span>일상 속 개인정보<b
+            aria-hidden="true">→</b></span></a>
+    </section>
+    <section class="faq-cta">
+      <div class="guide-inner">
+        <h2>실천 방법이 궁금하다면?</h2>
+        <p>보호 가이드에서 상황별 확인 사항을 살펴보세요.</p>
+        <a class="button" href="guide.html">보호 가이드 보기<span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="footer-top">
+        <div>
+          <h2>작은 확인으로, 더 안전한 일상.</h2>
+          <p>일상 속 개인정보 보호를 함께 실천합니다.</p>
+        </div>
+        <div class="footer-links">
+          <h2>사이트 안내</h2>
+          <a href="index.html" data-page="main">캠페인</a><a href="guide.html" data-page="guide">보호가이드</a><a
+            href="faq.html" data-page="faq">자주 묻는 질문</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a class="logo" href="index.html">SAFEN</a><small>© 2026 SAFEN. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <button class="top-button" aria-label="페이지 맨 위로 이동">
+    <span aria-hidden="true">↑</span>TOP
+  </button>
+</body>
+
+</html>

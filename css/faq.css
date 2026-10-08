@@ -1,4 +1,3 @@
-/* 배너와 검색창 전체에 배경 적용 */
 .faq-banner-wrap {
   width: 100%;
   background:
@@ -33,7 +32,6 @@
   background: transparent;
   padding: 24px 40px;
 }
-
 
 .faq-search {
   display: flex;
@@ -343,4 +341,26 @@
   .faq-cta p {
     font-size: 16px;
   }
+}
+
+/* 기본 버튼 */
+.faq-filters button {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease;
+}
+
+/* 선택되지 않은 버튼 호버 */
+.faq-filters button:not([aria-pressed="true"]):hover {
+  background-color: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+}
+
+/* 현재 선택된 버튼 */
+.faq-filters button[aria-pressed="true"] {
+  background-color: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
 }

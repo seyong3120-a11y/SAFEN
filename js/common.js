@@ -37,7 +37,7 @@ document
         : "smooth",
     }),
   );
-// 파일을 실제로 추가하면 자동으로 활성화합니다. 빈 src/가짜 재생 버튼을 사용하지 않습니다.
+
 document.querySelectorAll("video[data-src]").forEach(async (video) => {
   try {
     const response = await fetch(video.dataset.src, { method: "HEAD" });
@@ -53,6 +53,6 @@ document.querySelectorAll("video[data-src]").forEach(async (video) => {
       ?.setAttribute("hidden", "");
     video.closest(".main-hero")?.classList.add("has-video");
   } catch {
-    /* Live Server에서 실행하고 video/campaign.mp4를 추가하세요. */
+
   }
 });

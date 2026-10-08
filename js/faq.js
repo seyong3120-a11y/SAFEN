@@ -1,4 +1,3 @@
-// SVG에는 질문만 제공되어 있습니다. answer의  을 확정된 답변 문자열로 교체하세요.
 const faqData = [
   {
     id: 1,
@@ -121,7 +120,6 @@ const faqData = [
     answer: "정상적인 기관이나 금융회사는 문자로 비밀번호나 인증번호 전체를 요구하지 않습니다. 의심된다면 문자에 적힌 번호가 아닌 공식 대표번호로 직접 확인하세요.",
   },
 
-  // TODO: 앱·기기, 문자·피싱 질문과 답변은 제공받은 후 추가하세요.
 ];
 const filters = [...document.querySelectorAll("[data-category]")];
 const requestedCategory = new URLSearchParams(location.search).get("category");
@@ -166,7 +164,6 @@ function renderFaq() {
     answer.setAttribute("aria-hidden", "true");
     answer.inert = true;
 
-    // 답변이 부드럽게 펼쳐지도록 안쪽 영역 생성
     const answerInner = document.createElement("div");
     answerInner.className = "faq-answer-inner";
 
@@ -184,7 +181,6 @@ function renderFaq() {
       answer.setAttribute("aria-hidden", String(!nextOpen));
       answer.inert = !nextOpen;
 
-      // 이 클래스가 붙으면 펼쳐지고, 빠지면 접힙니다.
       answer.classList.toggle("is-open", nextOpen);
     });
     heading.append(button);

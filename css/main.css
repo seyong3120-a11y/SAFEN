@@ -1,57 +1,105 @@
+/* ========================================
+   SAFEN MAIN PAGE
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* 기본 배경 */
 body[data-page="main"] {
   background: var(--ivory);
 }
+
+/* 메인페이지 헤더 */
 body[data-page="main"] .site-header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 }
+
+/* ========================================
+   01. MAIN HERO
+======================================== */
+
+/* 히어로 전체 영역 */
 .main-hero {
-  height: 919px;
   position: relative;
-  background:
-    linear-gradient(90deg, #111b2980, #111b2920),
-    url("../img/campaign-poster.png") center/cover;
-  color: white;
+  width: 100%;
+  height: 919px;
+  overflow: hidden;
+  background: #111b29;
+  color: #ffffff;
   display: flex;
   align-items: center;
 }
-.main-hero-copy {
-  position: relative;
+
+/* 히어로 배경 영상 */
+.main-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 0;
+}
+
+/* 영상 위 어두운 그라데이션 */
+.main-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   z-index: 1;
   pointer-events: none;
+  background: linear-gradient(90deg,
+      rgba(17, 27, 41, 0.5) 0%,
+      rgba(17, 27, 41, 0.1) 100%);
 }
+
+/* 히어로 텍스트 영역 */
+.main-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+/* 히어로 제목 */
 .main-hero h1 {
   font-size: 64px;
   line-height: 1.19;
   margin: 30px 0;
 }
-.main-hero p:not(.eyebrow):not(.video-status) {
+
+/* 히어로 설명 */
+.main-hero p:not(.eyebrow) {
   font-size: 22px;
   line-height: 1.55;
 }
-.main-hero > .video-status {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 25px max(40px, calc((100% - 1440px) / 2));
-  background: #17253388;
-}
-.main-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  inset: 0;
-}
-.main-hero.has-video .main-hero-copy {
-  display: none;
-}
+
+/* ========================================
+   02. ABOUT CAMPAIGN
+======================================== */
+
 .main-about {
   padding: 150px 0 210px;
 }
+
+/* 캠페인 소개 */
 .main-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -60,54 +108,81 @@ body[data-page="main"] .site-header {
   border-bottom: 1px solid var(--line);
   align-items: center;
 }
+
 .main-intro p:not(.eyebrow) {
   border-left: 1px solid var(--line);
   padding-left: 50px;
   font-size: 20px;
 }
+
+/* 개인정보 보호 실천 가이드 */
 .main-practice {
   padding-top: 90px;
 }
-.main-practice > p:not(.eyebrow) {
+
+.main-practice>p:not(.eyebrow) {
   margin-top: 18px;
 }
+
+/* 카드 영역 */
 .main-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 36px;
   margin-top: 36px;
 }
+
+/* 카드 이미지 */
 .main-cards img {
   width: 100%;
-  aspect-ratio: 456/312;
+  aspect-ratio: 456 / 312;
   object-fit: cover;
 }
+
+/* 카드 제목 */
 .main-cards h3 {
   margin-top: 32px;
 }
+
+/* 카드 설명 */
 .main-cards p {
   font-size: 16px;
   margin-top: 16px;
 }
+
+/* ========================================
+   03. EVERYDAY RECORDS
+======================================== */
+
 .main-records {
   background: var(--sky);
   padding: 30px 0;
 }
+
 .main-records .inner {
   display: grid;
   grid-template-columns: 780fr 600fr;
   gap: 60px;
   align-items: center;
 }
+
+/* 이미지 */
 .main-records img {
   width: 100%;
-  aspect-ratio: 780/420;
+  aspect-ratio: 780 / 420;
   object-fit: cover;
 }
+
+/* 설명 */
 .main-records p:not(.eyebrow) {
   font-size: 18px;
   margin-top: 30px;
 }
+
+/* ========================================
+   04. FAQ PREVIEW
+======================================== */
+
 .main-faq {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -115,30 +190,48 @@ body[data-page="main"] .site-header {
   padding-top: 150px;
   padding-bottom: 120px;
 }
+
+/* 제목 */
 .main-faq h2,
 .main-cta h2 {
   font-size: 36px;
 }
+
+/* 설명 */
 .main-faq p:not(.eyebrow),
 .main-cta p {
   margin-top: 18px;
 }
+
+/* FAQ 질문 링크 */
 .main-question-links a {
   display: flex;
   gap: 20px;
   border-top: 1px solid var(--line);
   padding: 22px 0;
   font-size: 20px;
+  transition: color 0.4s ease;
 }
+
+/* 마지막 질문 */
 .main-question-links a:last-child {
   border-bottom: 1px solid var(--line);
 }
+
+/* 화살표 오른쪽 정렬 */
 .main-question-links a span:last-child {
   margin-left: auto;
 }
+
+/* FAQ 호버 */
 .main-question-links a:hover {
   color: #52748e;
 }
+
+/* ========================================
+   05. MAIN CTA
+======================================== */
+
 .main-cta {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -146,121 +239,170 @@ body[data-page="main"] .site-header {
   align-items: center;
   padding-bottom: 70px;
 }
+
+/* CTA 이미지 */
 .main-cta img {
   width: 100%;
-  aspect-ratio: 690/250;
+  aspect-ratio: 690 / 250;
   object-fit: cover;
 }
+
+/* ========================================
+   TABLET (1100px 이하)
+======================================== */
+
 @media (max-width: 1100px) {
+
+  /* HERO */
   .main-hero {
     height: 760px;
   }
+
   .main-hero h1 {
     font-size: 54px;
   }
+
+  /* ABOUT */
   .main-intro {
     gap: 30px;
   }
+
   .main-intro p:not(.eyebrow) {
     padding-left: 30px;
   }
+
   .main-about {
     padding: 100px 0;
   }
+
+  /* RECORDS */
   .main-records .inner {
     gap: 30px;
   }
+
+  /* FAQ */
   .main-faq {
     gap: 35px;
     padding: 100px 0;
   }
+
   .main-faq h2,
   .main-cta h2 {
     font-size: 30px;
   }
+
   .main-question-links a {
     font-size: 17px;
   }
 }
+
+/* ========================================
+   MOBILE (700px 이하)
+======================================== */
+
 @media (max-width: 700px) {
+
+  /* HERO */
   .main-hero {
     height: 640px;
-    background-position: 58% center;
   }
+
+  .main-video {
+    object-position: center;
+  }
+
   .main-hero h1 {
     font-size: 36px;
     line-height: 1.35;
     margin: 22px 0;
   }
-  .main-hero p:not(.eyebrow):not(.video-status) {
+
+  .main-hero p:not(.eyebrow) {
     font-size: 16px;
   }
-  .main-hero > .video-status {
-    padding: 16px 20px;
-    font-size: 12px;
-  }
+
+  /* ABOUT */
   .main-about {
     padding: 64px 0;
   }
+
   .main-intro {
     grid-template-columns: 1fr;
     gap: 22px;
     padding-bottom: 38px;
   }
+
   .main-intro h2 {
     font-size: 27px;
   }
+
   .main-intro p:not(.eyebrow) {
     border: 0;
     padding: 0;
     font-size: 15px;
   }
+
+  /* PRACTICE */
   .main-practice {
     padding-top: 42px;
   }
+
   .main-cards {
     grid-template-columns: 1fr;
     gap: 36px;
     margin-top: 26px;
   }
+
   .main-cards h3 {
     margin-top: 18px;
   }
+
   .main-cards p {
     margin-top: 8px;
     font-size: 14px;
   }
+
+  /* RECORDS */
   .main-records {
     padding: 32px 0 40px;
   }
+
   .main-records .inner {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
   .main-records p:not(.eyebrow) {
     font-size: 15px;
     margin-top: 20px;
   }
+
+  /* FAQ */
   .main-faq {
     grid-template-columns: 1fr;
     padding: 60px 0;
     gap: 32px;
   }
+
   .main-faq h2,
   .main-cta h2 {
     font-size: 27px;
   }
+
   .main-question-links a {
     font-size: 15px;
     gap: 12px;
     padding: 20px 0;
   }
+
+  /* CTA */
   .main-cta {
     grid-template-columns: 1fr;
     gap: 28px;
     padding-bottom: 16px;
   }
+
   .main-cta img {
-    aspect-ratio: 353/180;
+    aspect-ratio: 353 / 180;
   }
 }

@@ -80,9 +80,6 @@
   }
 }
 
-
-
-
 /* SVG 원본: 각 페이지 1920px / 공통 콘텐츠 1440px, 가이드 1592px. */
 @font-face {
   font-family: Pretendard;
@@ -183,10 +180,6 @@ input {
   font-size: 16px;
   font-weight: 700;
   margin-top: 32px;
-}
-
-.button:hover {
-  background: #344b60;
 }
 
 .site-header {

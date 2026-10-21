@@ -8,12 +8,10 @@
   --guide-banner-image: url("../img/contents02.png");
 }
 
-/* ③ 사기·유출 대응 클릭 → '의심스러운 순간' 배너 사진 */
 #panel-fraud {
   --guide-banner-image: url("../img/contents03.png");
 }
 
-/* 상단 캠페인 소개 영역: 기존 스타일 유지 */
 body[data-page="guide"] {
   background: var(--ivory);
 }
